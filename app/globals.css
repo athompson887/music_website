@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Jungle theme - playful and bright */
+  --color-jungle-green: #2D5016;
+  --color-jungle-lime: #84CC16;
+  --color-jungle-leaf: #65A30D;
+  --color-jungle-moss: #3F6212;
+
+  --color-sunny-yellow: #FBBF24;
+  --color-sunny-orange: #FB923C;
+  --color-sunny-gold: #F59E0B;
+
+  --color-sky-light: #7DD3FC;
+  --color-sky-bright: #38BDF8;
+
+  --color-berry-pink: #F472B6;
+  --color-berry-purple: #C084FC;
+
+  --color-earth-brown: #92400E;
+  --color-earth-tan: #D97706;
+
+  /* Fonts */
+  --font-fun: 'Fredoka', 'Comic Sans MS', cursive;
+  --font-rounded: 'Nunito', sans-serif;
+
+  /* Animations */
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(180deg, #F0FDF4 0%, #ECFDF5 50%, #FEF9C3 100%);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', cursive;
+}
+
+/* Fun button styles */
+.btn-jungle {
+  background: linear-gradient(to right, #84CC16, #65A30D);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: all 0.2s;
+}
+
+.btn-jungle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sunny {
+  background: linear-gradient(to right, #FBBF24, #FB923C);
+  color: #2D5016;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: all 0.2s;
+}
+
+.btn-sunny:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Playful card style */
+.card-playful {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 4px solid #84CC16;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.card-playful:hover {
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Jungle leaf decoration */
+.leaf-decoration {
+  position: relative;
+}
+
+.leaf-decoration::before {
+  content: '🌿';
+  position: absolute;
+  font-size: 2rem;
+  top: -1rem;
+  left: -1rem;
+  transform: rotate(-30deg);
+}
+
+/* Bouncy animation for icons */
+@keyframes bounce-fun {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(5deg);
+  }
+}
+
+.bounce-fun {
+  animation: bounce-fun 2s ease-in-out infinite;
+}
+
+/* Floating clouds background */
+.clouds-bg {
+  background-image:
+    radial-gradient(ellipse 100px 60px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 70%),
+    radial-gradient(ellipse 80px 50px at 80% 30%, rgba(255,255,255,0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 120px 70px at 50% 80%, rgba(255,255,255,0.6) 0%, transparent 70%);
+}
