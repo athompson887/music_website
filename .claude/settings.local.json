@@ -11,7 +11,8 @@
       "Bash(netlify login)",
       "Bash(netlify status:*)",
       "Bash(cd /Users/andrewthompson/AndroidStudioProjects/2025\\ Flutter\\ Projects/music_website && netlify sites:create:*)",
-      "Bash(netlify api:*)"
+      "Bash(netlify api:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
